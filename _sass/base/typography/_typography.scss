@@ -1,0 +1,182 @@
+////////////////////////////////////////////////////////////////////////////////
+//Colors
+////////////////////////////////////////////////////////////////////////////////
+
+// Maps ////////////////////////////////////////////////////////////////////////
+$typography: (
+  mobile-group: (
+    breakpoint-max: $breakpoint-mobile-small,
+    font-sizes:(
+      canon: (
+        font-size: 1.8rem,
+        strong: true
+      ),
+      trafalgar: (
+        font-size: 1.3rem,
+        strong: true
+      ),
+      double-pica: (
+        font-size: 1.3rem,
+        strong: true
+      ),
+      great: (
+        font-size: 1.2rem,
+        strong: true
+      ),
+      pica: (
+        font-size: 1.1rem,
+        strong: true
+      ),
+      long-primer: (
+        font-size: 1rem
+      ),
+      brevier: (
+        font-size: .8rem
+      ),
+      minion: (
+        font-size: .8rem,
+        uppercase: true
+      )
+    )
+  ),
+  tablet-group: (
+    breakpoint-min: $breakpoint-mobile-small,
+    breakpoint-max: $breakpoint-tablet,
+    font-sizes:(
+      canon: (
+        font-size: 3.1rem,
+        strong: true
+      ),
+      trafalgar: (
+        font-size: 2.2rem,
+        strong: true
+      ),
+      double-pica: (
+        font-size: 1.6rem,
+        strong: true
+      ),
+      great: (
+        font-size: 1.3rem,
+        strong: true
+      ),
+      pica: (
+        font-size: 1.2rem,
+        strong: true
+      ),
+      long-primer: (
+        font-size: 1.1rem
+      ),
+      brevier: (
+        font-size: 1rem
+      ),
+      minion: (
+        font-size: .8rem,
+        uppercase: true
+      )
+    )
+  ),
+  laptop-group: (
+    breakpoint-min: $breakpoint-tablet,
+    font-sizes:(
+      canon: (
+        font-size: 2.6rem,
+        strong: true
+      ),
+      trafalgar: (
+        font-size: 2rem,
+        strong: true
+      ),
+      double-pica: (
+        font-size: 1.5rem,
+        strong: true
+      ),
+      great: (
+        font-size: 1.3rem,
+        strong: true
+      ),
+      pica: (
+        font-size: 1.1rem,
+        strong: true
+      ),
+      long-primer: (
+        font-size: 1rem
+      ),
+      brevier: (
+        font-size: .8rem
+      ),
+      minion: (
+        font-size: .7rem,
+        uppercase: true
+      )
+    )
+  )
+);
+
+
+// Mixin ///////////////////////////////////////////////////////////////////////
+// Types
+// Generates the font-details
+@mixin font-size($font-name, $size, $uppercase, $strong) {
+  .#{$font-name} {
+    font-size: $size;
+    line-height: $size + ($size * .5);
+    @if ($uppercase) {
+      text-transform: uppercase;
+    }
+    @if ($strong) {
+      font-weight: bold;
+    }
+  }
+}
+
+// Parses the map
+@mixin generate-typography($map) {
+  @each $group-key, $group-data in $map {
+    //Get the breakpoint value
+    $breakpoint-min: map-get($group-data, breakpoint-min);
+    $breakpoint-max: map-get($group-data, breakpoint-max);
+    $font-sizes-map: map-get($group-data, font-sizes);
+    @if ($breakpoint-min and $breakpoint-max) {
+      @media only screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+        @each $font-name, $font-data in $font-sizes-map {
+          $size: map-get($font-data, font-size);
+          $strong: map-get($font-data, strong);
+          $uppercase: map-get($font-data, uppercase);
+          @include font-size($font-name, $size, $uppercase, $strong);
+        }
+      }
+    } @else if ($breakpoint-min) {
+      @media only screen and (min-width: ($breakpoint-min)) {
+        @each $font-name, $font-data in $font-sizes-map {
+          $size: map-get($font-data, font-size);
+          $strong: map-get($font-data, strong);
+          $uppercase: map-get($font-data, uppercase);
+          @include font-size($font-name, $size, $uppercase, $strong);
+        }
+      }
+    } @else if ($breakpoint-max) {
+      @media only screen and (max-width: ($breakpoint-max)) {
+        @each $font-name, $font-data in $font-sizes-map {
+          $size: map-get($font-data, font-size);
+          $strong: map-get($font-data, strong);
+          $uppercase: map-get($font-data, uppercase);
+          @include font-size($font-name, $size, $uppercase, $strong);
+        }
+      }
+    }
+  }
+}
+
+// Selectors ///////////////////////////////////////////////////////////////////
+.canon,
+.trafalgar,
+.double-pica,
+.great,
+.pica,
+.long-primer,
+.brevier,
+.minion {
+  font-family: 'Dosis', sans-serif;
+}
+// Includes ////////////////////////////////////////////////////////////////////
+@include generate-typography($typography);

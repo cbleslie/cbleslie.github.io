@@ -1,0 +1,96 @@
+////////////////////////////////////////////////////////////////////////////////
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+
+// Mixins //////////////////////////////////////////////////////////////////////
+@mixin generate-button-emotions($color-map) {
+  @each $color-key, $color-value in $color-map {
+    [data-button~="#{$color-key}"] {
+      background-color: $color-value;
+      // Testing to see how "dark" the color is, if it's too dark, we make the
+      // text lighter
+      @if (lightness($color-value) < 70) {
+        color: map-get($color, calm);
+      }
+    }
+  }
+}
+
+// Selectors ///////////////////////////////////////////////////////////////////
+[data-button] {
+  @include focus;
+
+  background-color: map-get($color, indifferent);
+  border: 0;
+  border-radius: .25rem;
+  // cursor to default. Though, you really should use a button.
+  // In the event we want to style a link like a button, we're goint to set
+  box-shadow: inset 0 0 0 1000px rgba(map-get($color, calm), .0);
+  cursor: default;
+  outline: .25rem solid rgba(map-get($color, interest), 0);
+  outline-offset: .25rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  transition: all .3s;
+
+  &:not([disabled]) {
+    &:hover {
+      box-shadow: inset 0 0 0 1000px rgba(map-get($color, calm), .3);
+    }
+
+    &:active {
+      box-shadow: inset 0 0 0 1000px rgba(map-get($color, despair), .5);
+    }
+  }
+
+  &[disabled] {
+    opacity: .5;
+  }
+}
+
+// Sizes
+[data-button~="extra-small"] {
+  padding-bottom: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+}
+
+[data-button~="small"] {
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+}
+
+[data-button~="large"] {
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+}
+
+[data-button~="extra-large"] {
+  padding-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2rem;
+}
+
+// Box Modifications
+[data-button~="block"] {
+  display: block;
+}
+
+// Includes ////////////////////////////////////////////////////////////////////
+@include generate-button-emotions($color);
+
+// A11y Checks /////////////////////////////////////////////////////////////////
+
+// NOTE: Don't use this for styling buttons!
+button {
+  @include a11y-needs('[type="button"]');
+}

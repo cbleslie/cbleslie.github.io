@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////////////////
+// Headings
+////////////////////////////////////////////////////////////////////////////////
+
+// Semantics should have no bearing on display Making headings display like all
+// 'Normal' text.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // Doing this instead of 1rem, just 'cause for inital visual-grep.
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}

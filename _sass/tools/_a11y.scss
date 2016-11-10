@@ -1,0 +1,32 @@
+////////////////////////////////////////////////////////////////////////////////
+// Accessablity Tools
+////////////////////////////////////////////////////////////////////////////////
+
+// This is used to make a11y assersions. Ensures that a given selector/attribute
+// is included.
+@mixin a11y-needs($missing) {
+  $assert-selector-background: map-get($color, anger);
+  $assert-selector-color: map-get($color, calm);
+
+  &:not(#{$missing}) {
+    outline: 3px solid $assert-selector-background;
+    outline-offset: 4px;
+    position: relative;
+
+    &::before {
+      background-color: $assert-selector-background;
+      color: $assert-selector-color;
+      content: 'You must ensure the element contains: #{$missing}';
+      display: block;
+      left: 100%;
+      padding-bottom: .5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: .5rem;
+      position: absolute;
+      text-align: left;
+      top: 100%;
+      white-space: nowrap;
+    }
+  }
+}

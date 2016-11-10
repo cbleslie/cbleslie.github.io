@@ -1,0 +1,31 @@
+$headline-background-color: map-get($color, interest);
+
+[data-headline] {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll-background-down-right;
+  animation-timing-function: linear;
+  background-attachment: fixed;
+  background-color: $headline-background-color;
+  background-image: radial-gradient(circle at 100% 150%, darken($headline-background-color, 2%) 24%, $headline-background-color 25%, $headline-background-color 28%, darken($headline-background-color, 2%) 29%, darken($headline-background-color, 2%) 36%, $headline-background-color 36%, $headline-background-color 40%, transparent 40%, transparent), radial-gradient(circle at 0    150%, darken($headline-background-color, 2%) 24%, $headline-background-color 25%, $headline-background-color 28%, darken($headline-background-color, 2%) 29%, darken($headline-background-color, 2%) 36%, $headline-background-color 36%, $headline-background-color 40%, transparent 40%, transparent), radial-gradient(circle at 50%  100%, $headline-background-color 10%, darken($headline-background-color, 2%) 11%, darken($headline-background-color, 2%) 23%, $headline-background-color 24%, $headline-background-color 30%, darken($headline-background-color, 2%) 31%, darken($headline-background-color, 2%) 43%, $headline-background-color 44%, $headline-background-color 50%, darken($headline-background-color, 2%) 51%, darken($headline-background-color, 2%) 63%, $headline-background-color 64%, $headline-background-color 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, $headline-background-color 5%, darken($headline-background-color, 2%) 6%, darken($headline-background-color, 2%) 15%, $headline-background-color 16%, $headline-background-color 20%, darken($headline-background-color, 2%) 21%, darken($headline-background-color, 2%) 30%, $headline-background-color 31%, $headline-background-color 35%, darken($headline-background-color, 2%) 36%, darken($headline-background-color, 2%) 45%, $headline-background-color 46%, $headline-background-color 49%, transparent 50%, transparent), radial-gradient(circle at 0    50%, $headline-background-color 5%, darken($headline-background-color, 2%) 6%, darken($headline-background-color, 2%) 15%, $headline-background-color 16%, $headline-background-color 20%, darken($headline-background-color, 2%) 21%, darken($headline-background-color, 2%) 30%, $headline-background-color 31%, $headline-background-color 35%, darken($headline-background-color, 2%) 36%, darken($headline-background-color, 2%) 45%, $headline-background-color 46%, $headline-background-color 49%, transparent 50%, transparent);
+  background-position: center;
+  background-size: 5rem 2.5rem;
+  box-shadow: 0 .3rem 0 0 rgba(map-get($color, despair), .2);
+  color: map-get($color, calm);
+  padding: 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  text-shadow: 0 .3rem 0 rgba(map-get($color, despair), .2);
+  transform: skewY(1deg);
+  transform-origin: top right;
+}
+
+@keyframes scroll-background-down-right {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 5rem 2.5rem;
+  }
+}

@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////////////////
+//Colors
+////////////////////////////////////////////////////////////////////////////////
+
+// Overview ////////////////////////////////////////////////////////////////////
+
+// We're using emotions to better convey the 'intent' of a color's usage in an
+// application. Let's go over them:
+// Anger       - dangerous, broken, anger.
+// Blame       - upsetting, caution, irritation, blame.
+// Calm        - quiet, content.
+// Despair     - death, negitive ending, regret, unknown
+// enthusiasm  - finish, happy, end, complete, safety, fixed.
+// indifferent - meh, fine, acceptable, optional indifference.
+// interest    - focus, prefered, default, insight
+// surprise    - unusual, out of the ordinary
+
+// Why? ////////////////////////////////////////////////////////////////////////
+
+// We're using a map here to define the project colors for conveience sake, as
+// most of the time we will be running the colors through a mixin. If an
+// individual color is needed, one could always just:
+// `color: map-get($color, $interest);` or what have you.
+
+// scss-lint:disable ColorVariable
+// Disabling this because it the linter doesn't undetstand variables being
+// defined in maps.
+
+$color: (
+  anger: rgb(255, 65, 54),
+  blame: rgb(255, 133, 27),
+  calm: rgb(255, 255, 255),
+  despair: rgb(17, 17, 17),
+  enthusiasm: rgb(46, 204, 64),
+  indifferent: rgb(221, 221, 221),
+  gloom: rgb(131, 131, 131),
+  interest: rgb(0, 116, 217),
+  surprise: rgb(177, 13, 201)
+);

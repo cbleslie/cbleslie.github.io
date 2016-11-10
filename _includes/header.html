@@ -1,0 +1,17 @@
+<nav data-primary-nav="fixed">
+  <ul data-horizontal-menu>
+    <li {% if '/' == page.url %}class="active"{% endif %}>
+      <a href="/" class="double-pica">{{ site.title }}</a>
+    </li>
+  </ul>
+  <ul data-horizontal-menu class="horizontal-menu--page-links">
+    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+    {% for p in navigation_pages %}
+      {% if p.navigation_weight %}
+        <li {% if p.url == page.url %}class="active"{% endif %}>
+          <a href="{{ p.url }}" class="pica">{{ p.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

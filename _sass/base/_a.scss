@@ -1,0 +1,5 @@
+a {
+  @include focus;
+  color: map-get($color, interest);
+  text-decoration: none;
+}

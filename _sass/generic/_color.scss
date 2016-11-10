@@ -1,0 +1,9 @@
+@mixin generate-color-classes($color-map) {
+  @each $name, $color in $color-map {
+    .#{$name} {
+      color: $color;
+    }
+  }
+}
+
+@include generate-color-classes($color);

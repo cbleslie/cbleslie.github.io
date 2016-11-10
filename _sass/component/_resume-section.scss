@@ -1,0 +1,22 @@
+[data-resume-section] {
+  .resume-section--meta {
+    align-items: center;
+    border-bottom: 1px solid map-get($color, indifferent);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @media (min-width: 0) and (max-width: $breakpoint-tablet) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  .resume-section--details {
+    margin-top: .5rem;
+  }
+
+  + [data-resume-section] {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,109 @@
+// Holy Grail should look something like this at a desktop rez.
+// +----------------------------+
+// | header                     |
+// +-----+--------------+-------+
+// | nav | main         | aside |
+// |     |              |       |
+// |     |              |       |
+// |     |              |       |
+// |     |              |       |
+// +-----+--------------+-------+
+// |  footer                    |
+// +----------------------------+
+
+//please make sure you read and understand flexbugs. There are a few issues that you should
+//know about before you start making layouts.
+// Flexbugs: https://github.com/philipwalton/flexbugs
+$layout-sidebar: 300px;
+$layout-margin: 2rem;
+
+$resume: (
+  layout-name: 'resume',
+  margin-size: $layout-margin,
+  breakpoints: (
+    mobile-small: (
+      size: $breakpoint-mobile-small,
+      area: (
+        headline: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: false,
+            right: false,
+            top: false
+          )
+        ),
+        overview: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        ),
+        content: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        )
+      )
+    ),
+    tablet: (
+      size: $breakpoint-tablet,
+      area: (
+        headline: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 0,
+          margin: (
+            bottom: 3rem,
+            left: false,
+            right: false,
+            top: false
+          )
+        ),
+        overview: (
+          grow: 0,
+          shrink: 0,
+          basis: $layout-sidebar,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        ),
+        content: (
+          grow: 1,
+          shrink: 1,
+          basis: 0%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        )
+      )
+    )
+  )
+);
+
+@include logjam($resume);

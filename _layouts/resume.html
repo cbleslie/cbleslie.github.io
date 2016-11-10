@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div data-layout="resume">
+  {% if page.headline %}
+    <div data-area="headline no-margin">
+      <div class="wrapper">
+        {% include headline.html headline=page.headline %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.user_name and page.user_email %}
+    <div data-area="overview">
+      <div class="wrapper">
+        {% include vcard.html user_name=page.user_name user_email=page.user_email %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div data-area="content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </div>
+</div>
