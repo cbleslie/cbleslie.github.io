@@ -1,11 +1,10 @@
 ---
 layout: resume
 title: Resume
-<!-- permalink: /resume/ -->
 user_name: Cameron Leslie
 user_email: cameronleslie@gmail.com
 headline: I want to make your experience better.
-<!-- navigation_weight: 0 -->
+
 ---
 <h3 class="trafalgar">Objective</h3>
 
@@ -77,4 +76,11 @@ I want the opportunity to create beauty in a professional environment where I wi
   start_date="2003"
   end_date="2005"
   details="I produced and managed short films that have appeared in festivals across the United States. As producer, managed two eight thousand dollar budgeted shorts. Performed all post processing; color-timing, effects, and compositing."
+%}
+{% include resume-section.html
+  company="Alias|Wavefront"
+  position="Aspire Program"
+  start_date="2000"
+  end_date="2002"
+  details="Coursework for learning Alias|Wavefront's Maya software package to produce animations and artwork for local no-profits."
 %}

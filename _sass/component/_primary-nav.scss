@@ -37,6 +37,9 @@ $primary-nav-text-color: map-get($color, calm);
     padding-left: 2rem;
     padding-right: 2rem;
     // transform: skewY(2deg);
+    &:hover {
+      border-bottom: 0;
+    }
   }
 
   //Mobile Nav

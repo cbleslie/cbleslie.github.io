@@ -1,0 +1,26 @@
+---
+layout: portfolio
+title: Work Samples
+permalink: /samples/
+navigation_weight: 1
+---
+<main data-layout="portfolio">
+  <div data-area="heading">
+    <div class="wrapper">
+      <h2 class="trafalgar">{{ page.title }}</h2>
+    </div>
+  </div>
+  {% for artwork in site.portfolio %}
+    <div data-area="thumbnail">
+      <div class="wrapper">
+        {% include portfolio-thumbnail.html
+           thumbnail=artwork.thumbnail
+           title=artwork.title
+           client=artwork.client
+           type=artwork.type
+           content=artwork.content
+        %}
+      </div>
+    </div>
+  {% endfor %}
+</main>

@@ -1,0 +1,69 @@
+
+$layout-margin: 2rem;
+
+$portfolio: (
+  layout-name: 'portfolio',
+  margin-size: $layout-margin,
+  breakpoints: (
+    mobile-small: (
+      size: $breakpoint-mobile-small,
+      area: (
+        heading: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: 4rem
+          )
+        ),
+        thumbnail: (
+          grow: 0,
+          shrink: 0,
+          basis: 50%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        )
+      )
+    ),
+    tablet: (
+      size: $breakpoint-tablet,
+      area: (
+        heading: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: 4rem
+          )
+        ),
+        thumbnail: (
+          grow: 0,
+          shrink: 0,
+          basis: 25%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        )
+      )
+    )
+  )
+);
+
+@include logjam($portfolio);
