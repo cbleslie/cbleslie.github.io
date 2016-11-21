@@ -8,6 +8,12 @@ navigation_weight: 1
   <div data-area="heading">
     <div class="wrapper">
       <h2 class="trafalgar">{{ page.title }}</h2>
+      <h3 class="double-pica">Code Samples</h3>
+      <ul>
+        <li><a href="https://github.com/cbleslie/" title="Github Profile">Github Profile</a></li>
+        <li><a href="http://codepen.io/cbleslie/" title="Code Pens">Code Pens</a></li>
+      </ul>
+      <h3 class="double-pica">Art Samples</h3>
     </div>
   </div>
   {% for artwork in site.portfolio %}
@@ -23,4 +29,5 @@ navigation_weight: 1
       </div>
     </div>
   {% endfor %}
+
 </main>
