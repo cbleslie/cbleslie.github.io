@@ -21,6 +21,10 @@ url: "cbleslie.github.io" # the base hostname & protocol for your site
 twitter_username: cbleslie
 github_username:  cbleslie
 
+#sass settings
+sass:
+  style: compressed
+
 #collections
 collections:
   - portfolio
