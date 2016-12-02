@@ -4,4 +4,5 @@ client: Reliant Energy
 type: Wireframe, UX Document
 thumbnail: reliant-ipad/thumbnail.png
 asset: reliant-ipad/asset.pdf
+weight: 1
 ---

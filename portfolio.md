@@ -16,7 +16,8 @@ navigation_weight: 1
       <h3 class="double-pica">Art Samples</h3>
     </div>
   </div>
-  {% for artwork in site.portfolio %}
+  {% assign sorted_portfolio = site.portfolio | sort: "weight" %}
+  {% for artwork in sorted_portfolio %}
     <div data-area="thumbnail">
       <div class="wrapper">
         {% include portfolio-thumbnail.html
