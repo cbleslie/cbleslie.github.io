@@ -4,7 +4,7 @@ title: Work Samples
 permalink: /samples/
 navigation_weight: 1
 ---
-<main data-layout="portfolio">
+<main role="main" data-layout="portfolio">
   <div data-area="heading">
     <div class="wrapper">
       <h2 class="trafalgar">{{ page.title }}</h2>

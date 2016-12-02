@@ -3,7 +3,7 @@ layout: default
 ---
 <div data-layout="resume">
   {% if page.headline %}
-    <div data-area="headline no-margin">
+    <div role="banner" data-area="headline no-margin">
       <div class="wrapper">
         {% include headline.html headline=page.headline %}
       </div>
@@ -18,7 +18,7 @@ layout: default
     </div>
   {% endif %}
 
-  <div data-area="content">
+  <div role="main" data-area="content">
     <div class="wrapper">
       {{ content }}
     </div>
