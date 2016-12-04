@@ -9,14 +9,16 @@
 [data-portfolio-thumbnail] {
   max-width: 10rem;
 
+
   .portfolio-thumbnail--preview {
+    display: flex;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid map-get($color, indifferent);
     border-radius: 1000px;
     box-shadow: 0 0 0 0 rgba(map-get($color, interest), 0);
-    display: block;
+    color: transparent;
     transform: scale(.95);
     transition: transform .3s cubic-bezier(.68, -.55, .27, 1.55), box-shadow .4s cubic-bezier(.68, -.55, .27, 1.55);
 
