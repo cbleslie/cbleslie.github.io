@@ -1,17 +1,19 @@
 <nav role="menubar" data-primary-nav="fixed">
-  <ul data-horizontal-menu role="menu">
-    <li {% if '/' == page.url %}class="active"{% endif %}>
-      <h1><a href="/" class="double-pica">{{ site.title }}</a></h1>
-    </li>
-  </ul>
-  <ul data-horizontal-menu role="menu" class="horizontal-menu--page-links">
-    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
-    {% for p in navigation_pages %}
-      {% if p.navigation_weight %}
-        <li {% if p.url == page.url %}class="active"{% endif %} li role="menuitem">
-          <a href="{{ p.url }}" class="pica">{{ p.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  <div class="data-primary-nav--wrapper">
+    <ul data-horizontal-menu role="menu">
+      <li {% if '/' == page.url %}class="active"{% endif %}>
+        <h1><a href="/" class="double-pica">{{ site.title }}</a></h1>
+      </li>
+    </ul>
+    <ul data-horizontal-menu role="menu" class="horizontal-menu--page-links">
+      {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+      {% for p in navigation_pages %}
+        {% if p.navigation_weight %}
+          <li {% if p.url == page.url %}class="active"{% endif %} li role="menuitem">
+            <a href="{{ p.url }}" class="pica">{{ p.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

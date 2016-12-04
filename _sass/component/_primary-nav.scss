@@ -5,10 +5,7 @@ $primary-nav-text-color: map-get($color, calm);
   align-items: center;
   background-color: $primary-nav-background-color;
   box-shadow: 0 .3rem 0 0 rgba(map-get($color, despair), .2);
-  display: flex;
-  flex-direction: row;
   font-weight: bold;
-  justify-content: space-between;
   transform: skewY(-2deg);
   transform-origin: top right;
   width: 100%;
@@ -19,8 +16,6 @@ $primary-nav-text-color: map-get($color, calm);
     background-image: radial-gradient(circle at 100% 150%, darken($primary-nav-background-color, 2%) 24%, $primary-nav-background-color 25%, $primary-nav-background-color 28%, darken($primary-nav-background-color, 2%) 29%, darken($primary-nav-background-color, 2%) 36%, $primary-nav-background-color 36%, $primary-nav-background-color 40%, transparent 40%, transparent), radial-gradient(circle at 0    150%, darken($primary-nav-background-color, 2%) 24%, $primary-nav-background-color 25%, $primary-nav-background-color 28%, darken($primary-nav-background-color, 2%) 29%, darken($primary-nav-background-color, 2%) 36%, $primary-nav-background-color 36%, $primary-nav-background-color 40%, transparent 40%, transparent), radial-gradient(circle at 50%  100%, $primary-nav-background-color 10%, darken($primary-nav-background-color, 2%) 11%, darken($primary-nav-background-color, 2%) 23%, $primary-nav-background-color 24%, $primary-nav-background-color 30%, darken($primary-nav-background-color, 2%) 31%, darken($primary-nav-background-color, 2%) 43%, $primary-nav-background-color 44%, $primary-nav-background-color 50%, darken($primary-nav-background-color, 2%) 51%, darken($primary-nav-background-color, 2%) 63%, $primary-nav-background-color 64%, $primary-nav-background-color 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, $primary-nav-background-color 5%, darken($primary-nav-background-color, 2%) 6%, darken($primary-nav-background-color, 2%) 15%, $primary-nav-background-color 16%, $primary-nav-background-color 20%, darken($primary-nav-background-color, 2%) 21%, darken($primary-nav-background-color, 2%) 30%, $primary-nav-background-color 31%, $primary-nav-background-color 35%, darken($primary-nav-background-color, 2%) 36%, darken($primary-nav-background-color, 2%) 45%, $primary-nav-background-color 46%, $primary-nav-background-color 49%, transparent 50%, transparent), radial-gradient(circle at 0    50%, $primary-nav-background-color 5%, darken($primary-nav-background-color, 2%) 6%, darken($primary-nav-background-color, 2%) 15%, $primary-nav-background-color 16%, $primary-nav-background-color 20%, darken($primary-nav-background-color, 2%) 21%, darken($primary-nav-background-color, 2%) 30%, $primary-nav-background-color 31%, $primary-nav-background-color 35%, darken($primary-nav-background-color, 2%) 36%, darken($primary-nav-background-color, 2%) 45%, $primary-nav-background-color 46%, $primary-nav-background-color 49%, transparent 50%, transparent);
     background-position: center;
     background-size: 3rem 1.5rem;
-
-    // background-color: darken($primary-nav-background-color, 3%);
     content: '';
     display: block;
     height: 4.6rem;
@@ -29,6 +24,13 @@ $primary-nav-text-color: map-get($color, calm);
     top: -4.5rem;
     width: 100%;
     z-index: -1;
+  }
+
+  .data-primary-nav--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 
   a {
@@ -44,12 +46,18 @@ $primary-nav-text-color: map-get($color, calm);
 
   //Mobile Nav
   @media (min-width: 0) and (max-width: $breakpoint-tablet) {
-    flex-direction: column;
+
+    .data-primary-nav--wrapper {
+      flex-direction: column;
+    }
+
+    [data-horizontal-menu] {
+      text-align: center;
+      width: 100%;
+    }
 
     .horizontal-menu--page-links {
       background-color: rgba(map-get($color, despair), .1);
-      text-align: center;
-      width: 100%;
     }
 
     a {

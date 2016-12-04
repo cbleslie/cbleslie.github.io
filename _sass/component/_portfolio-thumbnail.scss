@@ -7,11 +7,12 @@
 }
 
 [data-portfolio-thumbnail] {
+  width: 100%;
   max-width: 10rem;
 
 
   .portfolio-thumbnail--preview {
-    display: flex;
+    display: block;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +26,7 @@
     &::before {
       content: '';
       display: block;
-      padding-bottom: 100%;
+      padding: 50%;
     }
 
     &:active,
