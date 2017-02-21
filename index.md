@@ -33,7 +33,7 @@ I want the opportunity to create beauty in a professional environment where I wi
   position="Lead UX and Design"
   start_date="Jun 2011"
   end_date="Feb 2017"
-  details="I am lead for User Experience at ViiMed. I work to make great moments in hospital workflows for Patients and Healthcare Providers by the use of tailored pathway system provided by our platform. We've built a communication tool to help enhance, and automate Provider and Patient interaction."
+  details="As lead for User Experience and Design at ViiMed I worked to make great moments in hospital workflows for Patients and Healthcare Providers by creating the pathway system provided by our platform. I engineered a communication tool to help enhance, and automate Provider and Patient interaction."
 %}
 
 {% include resume-section.html
@@ -41,7 +41,7 @@ I want the opportunity to create beauty in a professional environment where I wi
   position="Proprietor"
   start_date="Jun 2008"
   end_date="Present"
-  details="As primary freelance developer I brand, design and develop web applications and interfaces for startups around the United States. I manage independent contractors for the completion of large projects."
+  details="As primary freelance developer I brand, design and develop web applications and interfaces for startups and well known brands such as NFL.com."
 %}
 
 {% include resume-section.html
@@ -49,7 +49,7 @@ I want the opportunity to create beauty in a professional environment where I wi
   position="User Experience"
   start_date="Oct 2010"
   end_date="Dec 2010"
-  details="Worked with Schematic to design and create UX flows and wireframes for web and iPad interfaces."
+  details="Created UX flows and wireframes for web and iPad interfaces for Dell and Reliant Energy."
 %}
 
 {% include resume-section.html
@@ -82,5 +82,5 @@ I want the opportunity to create beauty in a professional environment where I wi
   position="Aspire Program"
   start_date="2000"
   end_date="2002"
-  details="Coursework for learning Alias|Wavefront's Maya software package to produce animations and artwork for local no-profits."
+  details="Coursework for learning Alias|Wavefront's Maya software package to produce animations and artwork for local non-profits."
 %}
