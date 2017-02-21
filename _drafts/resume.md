@@ -47,7 +47,7 @@ I want the opportunity to create beauty in a professional environment where I wi
 
 {% include resume-section.html
   company="Schematic"
-  position="User Experiance"
+  position="User Experience"
   start_date="Oct 2010"
   end_date="Dec 2010"
   details="Worked with Schematic to design and create UX flows and wireframes for web and iPad interfaces."

@@ -32,7 +32,7 @@ I want the opportunity to create beauty in a professional environment where I wi
   company="ViiMed"
   position="Lead UX and Design"
   start_date="Jun 2011"
-  end_date="Present"
+  end_date="Feb 2017"
   details="I am lead for User Experience at ViiMed. I work to make great moments in hospital workflows for Patients and Healthcare Providers by the use of tailored pathway system provided by our platform. We've built a communication tool to help enhance, and automate Provider and Patient interaction."
 %}
 
@@ -46,7 +46,7 @@ I want the opportunity to create beauty in a professional environment where I wi
 
 {% include resume-section.html
   company="Schematic"
-  position="User Experiance"
+  position="User Experience"
   start_date="Oct 2010"
   end_date="Dec 2010"
   details="Worked with Schematic to design and create UX flows and wireframes for web and iPad interfaces."
