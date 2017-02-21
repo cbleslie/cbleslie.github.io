@@ -9,7 +9,7 @@ headline: I want to make your experience better.
 <h3 class="trafalgar">Objective</h3>
 
 I want the opportunity to create beauty in a professional environment where I will further develop my insight and skill as a User Experience Engineer, Storyteller & Artist.
-
+<br/>
 <h3 class="trafalgar">Skill-Set</h3>
 
 - Wireframes
@@ -67,7 +67,7 @@ I want the opportunity to create beauty in a professional environment where I wi
   end_date="Oct 2007"
   details="Working with project managers, content strategists, writers, information architects and developers, improving The Walt Disney Company's on-line properties. Responsibilities included wire-frame translation, component design, animation, scripting of asset batch processing."
 %}
-
+<br/>
 <h3 class="trafalgar">Education</h3>
 
 {% include resume-section.html
