@@ -10,6 +10,7 @@ headline: I want to make your experience better.
 
 I want the opportunity to create beauty in a professional environment where I will further develop my insight and skill as a User Experience Engineer, Storyteller & Artist.
 <br/>
+<br/>
 <h3 class="trafalgar">Skill-Set</h3>
 
 - Wireframes
