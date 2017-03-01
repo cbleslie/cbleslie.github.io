@@ -3,12 +3,12 @@ layout: resume
 title: Resume
 user_name: Cameron Leslie
 user_email: cameronleslie@gmail.com
-headline: I want to make your experience better.
+headline: Let's make the complex simple.
 
 ---
 <h3 class="trafalgar">Objective</h3>
 
-I want the opportunity to create beauty in a professional environment where I will further develop my insight and skill as a User Experience Engineer, Storyteller & Artist.
+To create beauty in a professional environment where I will further develop my insight and skill as a User Experience Engineer, Storyteller & Artist.
 <br/>
 <br/>
 <h3 class="trafalgar">Skill-Set</h3>
@@ -34,7 +34,7 @@ I want the opportunity to create beauty in a professional environment where I wi
   position="Lead UX and Design"
   start_date="Jun 2011"
   end_date="Feb 2017"
-  details="As lead for User Experience and Design at ViiMed I worked to make great moments in hospital workflows for Patients and Healthcare Providers by creating the pathway system provided by our platform. I engineered a communication tool to help enhance, and automate Provider and Patient interaction."
+  details="As Lead for User Experience and Design at ViiMed I worked to make great moments in hospital workflows for Patients and Healthcare Providers by creating the pathway system provided by our platform. I engineered a communication tool to help enhance, and automate Provider and Patient interaction."
 %}
 
 {% include resume-section.html

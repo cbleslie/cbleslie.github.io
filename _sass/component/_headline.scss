@@ -1,4 +1,4 @@
-$headline-background-color: map-get($color, interest);
+$headline-background-color: darken(map-get($color, enthusiasm), 10%);
 
 [data-headline] {
   animation-duration: 5s;
