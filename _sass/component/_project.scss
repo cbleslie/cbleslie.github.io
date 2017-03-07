@@ -1,8 +1,9 @@
 [data-project] {
   background-color: map-get($color, calm);
   border: 1px solid map-get($color, indifferent);
+  border-bottom: .2rem solid $key-color;
   border-radius: .2rem;
-  padding-bottom: .5rem;
+  padding-bottom: .8rem;
   padding-left: .8rem;
   padding-right: .8rem;
   padding-top: .5rem;

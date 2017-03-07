@@ -8,34 +8,21 @@
     border-radius: .2rem;
     box-shadow: 0 0 0 1px rgba(map-get($color, indifferent), 1);
     display: block;
+    filter: grayscale(1);
     height: calc(20vw);
-    transition: box-shadow .4s cubic-bezier(.68, -.55, .27, 1.55);
+    transition: filter .5s cubic-bezier(.68, -.55, .27, 1.55), box-shadow .4s cubic-bezier(.68, -.55, .27, 1.55);
     width: 100%;
 
     &:active,
     &:hover {
       box-shadow: 0 0 0 .25rem $key-color;
+      filter: grayscale(0);
     }
   }
 
   .portfolio-thumbnail--title,
   .portfolio-thumbnail--client,
   .portfolio-thumbnail--type {
-    /* These are technically the same, but use both */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-
-    -ms-word-break: break-all;
-    /* This is the dangerous one in WebKit, as it breaks things wherever */
-    word-break: break-all;
-    /* Instead use this non-standard one: */
-    word-break: break-word;
-
-    /* Adds a hyphen where the word breaks, if supported (No Blink) */
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
     display: block;
     margin-top: .25rem;
   }
