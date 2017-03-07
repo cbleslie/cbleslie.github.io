@@ -1,30 +1,21 @@
-$primary-nav-background-color: map-get($color, enthusiasm);
+$primary-nav-background-color-a: darken($key-color, 5%);
+$primary-nav-background-color-b: darken($key-color, 10%);
 $primary-nav-text-color: map-get($color, calm);
 
 [data-primary-nav] {
   align-items: center;
-  background-color: $primary-nav-background-color;
-  box-shadow: 0 .3rem 0 0 rgba(map-get($color, despair), .2);
+  background: linear-gradient(
+    20deg,
+    $primary-nav-background-color-a 0%,
+    $primary-nav-background-color-b 100%
+  );
+  background-color: $primary-nav-background-color-a;
+  border-radius: .2rem;
+  box-shadow: 0 .2rem 0 .1rem rgba(map-get($color, despair), .25);
   font-weight: bold;
-  transform: skewY(-2deg);
-  transform-origin: top right;
-  width: 100%;
+  margin: .5rem;
+  width: calc(100% - 1rem);
   z-index: 1000;
-
-  &::before {
-    background-color: $primary-nav-background-color;
-    background-image: radial-gradient(circle at 100% 150%, darken($primary-nav-background-color, 2%) 24%, $primary-nav-background-color 25%, $primary-nav-background-color 28%, darken($primary-nav-background-color, 2%) 29%, darken($primary-nav-background-color, 2%) 36%, $primary-nav-background-color 36%, $primary-nav-background-color 40%, transparent 40%, transparent), radial-gradient(circle at 0    150%, darken($primary-nav-background-color, 2%) 24%, $primary-nav-background-color 25%, $primary-nav-background-color 28%, darken($primary-nav-background-color, 2%) 29%, darken($primary-nav-background-color, 2%) 36%, $primary-nav-background-color 36%, $primary-nav-background-color 40%, transparent 40%, transparent), radial-gradient(circle at 50%  100%, $primary-nav-background-color 10%, darken($primary-nav-background-color, 2%) 11%, darken($primary-nav-background-color, 2%) 23%, $primary-nav-background-color 24%, $primary-nav-background-color 30%, darken($primary-nav-background-color, 2%) 31%, darken($primary-nav-background-color, 2%) 43%, $primary-nav-background-color 44%, $primary-nav-background-color 50%, darken($primary-nav-background-color, 2%) 51%, darken($primary-nav-background-color, 2%) 63%, $primary-nav-background-color 64%, $primary-nav-background-color 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, $primary-nav-background-color 5%, darken($primary-nav-background-color, 2%) 6%, darken($primary-nav-background-color, 2%) 15%, $primary-nav-background-color 16%, $primary-nav-background-color 20%, darken($primary-nav-background-color, 2%) 21%, darken($primary-nav-background-color, 2%) 30%, $primary-nav-background-color 31%, $primary-nav-background-color 35%, darken($primary-nav-background-color, 2%) 36%, darken($primary-nav-background-color, 2%) 45%, $primary-nav-background-color 46%, $primary-nav-background-color 49%, transparent 50%, transparent), radial-gradient(circle at 0    50%, $primary-nav-background-color 5%, darken($primary-nav-background-color, 2%) 6%, darken($primary-nav-background-color, 2%) 15%, $primary-nav-background-color 16%, $primary-nav-background-color 20%, darken($primary-nav-background-color, 2%) 21%, darken($primary-nav-background-color, 2%) 30%, $primary-nav-background-color 31%, $primary-nav-background-color 35%, darken($primary-nav-background-color, 2%) 36%, darken($primary-nav-background-color, 2%) 45%, $primary-nav-background-color 46%, $primary-nav-background-color 49%, transparent 50%, transparent);
-    background-position: center;
-    background-size: 3rem 1.5rem;
-    content: '';
-    display: block;
-    height: 4.6rem;
-    left: 0;
-    position: absolute;
-    top: -4.5rem;
-    width: 100%;
-    z-index: -1;
-  }
 
   .data-primary-nav--wrapper {
     display: flex;
@@ -41,6 +32,7 @@ $primary-nav-text-color: map-get($color, calm);
     // transform: skewY(2deg);
     &:hover {
       border-bottom: 0;
+      text-decoration: none;
     }
   }
 

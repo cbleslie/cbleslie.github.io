@@ -1,26 +1,44 @@
 ---
 layout: default
 ---
-<div data-layout="resume">
-  {% if page.headline %}
-    <div role="banner" data-area="headline no-margin">
-      <div class="wrapper">
-        {% include headline.html headline=page.headline %}
-      </div>
-    </div>
-  {% endif %}
+{% if page.headline %}
+  {% include headline.html headline=page.headline %}
+{% endif %}
 
-  {% if page.user_name and page.user_email %}
-    <div data-area="overview">
-      <div class="wrapper">
-        {% include vcard.html user_name=page.user_name user_email=page.user_email %}
+<div class="container">
+  <div data-layout="resume">
+    {% if page.user_name and page.user_email %}
+      <div data-area="overview">
+        <div class="wrapper">
+          {% include vcard.html user_name=page.user_name user_email=page.user_email %}
+          <br/>
+          <h3 class="trafalgar">Skill-Set</h3>
+          <ul>
+            <li>Wireframes</li>
+            <li>Sass/CSS</li>
+            <li>Javascript
+              <ul>
+                <li>React</li>
+                <li>Angular</li>
+              </ul>
+            </li>
+            <li>Jekyll</li>
+            <li>3D
+              <ul>
+                <li>Maya</li>
+                <li>Blender</li>
+              </ul>
+            </li>
+            <li>Wireframes</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
 
-  <div role="main" data-area="content">
-    <div class="wrapper">
-      {{ content }}
+    <div role="main" data-area="content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
   </div>
 </div>

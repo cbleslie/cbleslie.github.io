@@ -27,7 +27,7 @@
   // In the event we want to style a link like a button, we're goint to set
   box-shadow: inset 0 0 0 1000px rgba(map-get($color, calm), .0);
   cursor: default;
-  outline: .25rem solid rgba(map-get($color, interest), 0);
+  outline: .25rem solid rgba($key-color, 0);
   outline-offset: .25rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;

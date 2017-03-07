@@ -5,7 +5,7 @@
 // Mixin ///////////////////////////////////////////////////////////////////////
 @mixin focus {
   &:focus {
-    outline: .25rem solid map-get($color, interest);
+    outline: .25rem solid $key-color;
     outline-offset: .25rem;
   }
 }

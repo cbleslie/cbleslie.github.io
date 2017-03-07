@@ -1,3 +1,17 @@
 .container {
-  margin-top: 3.95rem;
+  // background-color: map-get($color, calm);
+  background: linear-gradient(
+    to top,
+    rgba(map-get($color, calm), 1) 0%,
+    rgba(map-get($color, calm), 1) 98%,
+    rgba(map-get($color, calm), .8) 100%);
+  border-radius: .2rem;
+  box-shadow: 0 .3rem 0 .2rem rgba(map-get($color, despair), .1);
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2rem;
+  max-width: 1080px;
+  padding: 1rem;
+  width: 90%;
 }

@@ -11,21 +11,6 @@ headline: Let's make the complex simple.
 To create beauty in a professional environment where I will further develop my insight and skill as a User Experience Engineer, Storyteller & Artist.
 <br/>
 <br/>
-<h3 class="trafalgar">Skill-Set</h3>
-
-- Wireframes
-- Sass/CSS
-  - ITCSS
-  - BEM
-  - Attribute Modules
-- Javascript (ES5/6)
-  - React
-  - Angular
-- Jekyll
-- Illustration
-- 3D
-  - Maya
-  - Blender
 
 <h3 class="trafalgar">Experience</h3>
 
@@ -37,13 +22,13 @@ To create beauty in a professional environment where I will further develop my i
   details="As Lead for User Experience and Design at ViiMed I worked to make great moments in hospital workflows for Patients and Healthcare Providers by creating the pathway system provided by our platform. I engineered a communication tool to help enhance, and automate Provider and Patient interaction."
 %}
 
-{% include resume-section.html
+<!-- {% include resume-section.html
   company="LutraHaus"
   position="Proprietor"
   start_date="Jun 2008"
   end_date="Present"
   details="As primary freelance developer I brand, design and develop web applications and interfaces for startups and well known brands such as NFL.com."
-%}
+%} -->
 
 {% include resume-section.html
   company="Schematic"

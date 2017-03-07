@@ -8,7 +8,19 @@ $portfolio: (
     mobile-small: (
       size: $breakpoint-mobile-small,
       area: (
-        heading: (
+        thumbnail: (
+          grow: 0,
+          shrink: 0,
+          basis: 100%,
+          order: 1,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        ),
+        projects: (
           grow: 0,
           shrink: 0,
           basis: 100%,
@@ -17,19 +29,7 @@ $portfolio: (
             bottom: true,
             left: true,
             right: true,
-            top: 4rem
-          )
-        ),
-        thumbnail: (
-          grow: 0,
-          shrink: 0,
-          basis: 50%,
-          order: 0,
-          margin: (
-            bottom: true,
-            left: true,
-            right: true,
-            top: true
+            top: 9rem
           )
         )
       )
@@ -37,28 +37,28 @@ $portfolio: (
     tablet: (
       size: $breakpoint-tablet,
       area: (
-        heading: (
-          grow: 0,
-          shrink: 0,
-          basis: 100%,
+        thumbnail: (
+          grow: 1,
+          shrink: 1,
+          basis: 0%,
           order: 0,
           margin: (
             bottom: true,
             left: true,
             right: true,
-            top: 4rem
+            top: 9rem
           )
         ),
-        thumbnail: (
+        projects: (
           grow: 0,
           shrink: 0,
-          basis: 25%,
-          order: 0,
+          basis: $layout-sidebar,
+          order: 1,
           margin: (
             bottom: true,
             left: true,
             right: true,
-            top: true
+            top: 9rem
           )
         )
       )

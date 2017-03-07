@@ -1,6 +1,6 @@
 a {
   @include focus;
-  color: map-get($color, interest);
+  color: $key-color;
   text-decoration: none;
 
   &:hover {
