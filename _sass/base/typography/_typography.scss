@@ -123,6 +123,9 @@ $typography: (
     @if ($uppercase) {
       text-transform: uppercase;
     }
+    @if ($strong) {
+      font-weight: bold;
+    }
   }
 }
 
@@ -174,7 +177,6 @@ $typography: (
 .brevier,
 .minion {
   font-family: 'Raleway', sans-serif;
-  font-weight: 400;
 }
 // Includes ////////////////////////////////////////////////////////////////////
 @include generate-typography($typography);
