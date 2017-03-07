@@ -3,7 +3,7 @@ layout: resume
 title: Resume
 user_name: Cameron Leslie
 user_email: cameronleslie@gmail.com
-headline: Let's make the complex simple.
+headline: Make the complex simple.
 
 ---
 <h3 class="trafalgar">Objective</h3>

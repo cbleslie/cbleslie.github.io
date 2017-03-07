@@ -5,23 +5,18 @@ permalink: /samples/
 navigation_weight: 1
 ---
 <main role="main" data-layout="portfolio">
-
-  <div data-area="projects">
-    <div class="wrapper">
-      <h3 class="double-pica">Code Samples</h3>
-      <ul>
-        <li><a href="https://github.com/cbleslie/" title="Github Profile">Github Profile</a></li>
-        <li><a href="http://codepen.io/cbleslie/" title="Code Pens">Code Pens</a></li>
-      </ul>
-    </div>
-  </div>
-
   <div data-area="thumbnail">
     <div class="wrapper">
-      <h2 class="trafalgar">{{ page.title }}</h2>
+
       <div data-layout="thumbnails">
+        <div data-area="title">
+          <div class="wrapper">
+            <h2 class="trafalgar">{{ page.title }}</h2>
+          </div>
+        </div>
         {% assign sorted_portfolio = site.portfolio | sort: "weight" %}
         {% for artwork in sorted_portfolio %}
+
           <div data-area="thumb">
             <div class="wrapper">
             {% include portfolio-thumbnail.html
@@ -35,6 +30,40 @@ navigation_weight: 1
           </div>
         {% endfor %}
       </div>
+    </div>
+  </div>
+  <div data-area="projects">
+    <div class="wrapper">
+      <h3 class="double-pica">Projects</h3>
+      <br/>
+      {% include project.html
+        title="LogJam"
+        link="https://github.com/cbleslie/LogJam"
+        content="An API'esq way of managing your flexbox layouts"
+      %}
+      {% include project.html
+        title="Viilo"
+        link="https://github.com/psalaets/viilo"
+        content="The ping pong ladder for your office"
+      %}
+      {% include project.html
+        title="Comichron Widget"
+        link="https://github.com/comichron-data/widget"
+        content="Embedable javascript widget to track a comic's popularity"
+      %}
+      <br/>
+      <h3 class="double-pica">Other</h3>
+      <br/>
+      {% include project.html
+        title="Github"
+        link="https://github.com/cbleslie/"
+        content="My profile on Github, with addtional repositories I'm working on"
+      %}
+      {% include project.html
+        title="Codpen.io"
+        link="http://codepen.io/cbleslie/"
+        content="Mostly CSS demos, and experiments"
+      %}
     </div>
   </div>
 

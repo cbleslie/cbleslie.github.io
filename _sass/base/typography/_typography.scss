@@ -123,9 +123,6 @@ $typography: (
     @if ($uppercase) {
       text-transform: uppercase;
     }
-    @if ($strong) {
-      font-weight: bold;
-    }
   }
 }
 

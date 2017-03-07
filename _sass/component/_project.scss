@@ -1,0 +1,22 @@
+[data-project] {
+  background-color: map-get($color, calm);
+  border: 1px solid map-get($color, indifferent);
+  border-radius: .2rem;
+  padding-bottom: .5rem;
+  padding-left: .8rem;
+  padding-right: .8rem;
+  padding-top: .5rem;
+
+
+  .project--title {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  .project--content {
+  }
+
+  + [data-project] {
+    margin-top: 1rem;
+  }
+}

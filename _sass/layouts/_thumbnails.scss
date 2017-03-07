@@ -1,35 +1,35 @@
 
 $layout-margin: 2rem;
 
-$portfolio: (
-  layout-name: 'portfolio',
+$thumbnails: (
+  layout-name: 'thumbnails',
   margin-size: $layout-margin,
   breakpoints: (
     mobile-small: (
       size: $breakpoint-mobile-small,
       area: (
-        thumbnail: (
+        thumb: (
           grow: 0,
           shrink: 0,
-          basis: 100%,
-          order: 1,
+          basis: 50%,
+          order: 0,
           margin: (
-            bottom: 0,
-            left: 0,
-            right: 0,
-            top: 0
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
           )
         ),
-        projects: (
-          grow: 0,
-          shrink: 0,
+        title: (
+          grow: 1,
+          shrink: 1,
           basis: 100%,
           order: 0,
           margin: (
             bottom: true,
             left: true,
             right: true,
-            top: 9rem
+            top: true
           )
         )
       )
@@ -37,33 +37,33 @@ $portfolio: (
     tablet: (
       size: $breakpoint-tablet,
       area: (
-        thumbnail: (
-          grow: 1,
-          shrink: 1,
-          basis: 0%,
+        thumb: (
+          grow: 0,
+          shrink: 0,
+          basis: 50%,
           order: 0,
           margin: (
             bottom: true,
             left: true,
             right: true,
-            top: 9rem
+            top: 1rem
           )
         ),
-        projects: (
-          grow: 0,
-          shrink: 0,
-          basis: $layout-sidebar,
-          order: 1,
+        title: (
+          grow: 1,
+          shrink: 1,
+          basis: 100%,
+          order: 0,
           margin: (
-            bottom: 0,
-            left: 0,
-            right: 0,
-            top: 9rem
+            bottom: true,
+            left: true,
+            right: true,
+            top: 0
           )
-        )
+        ),
       )
     )
   )
 );
 
-@include logjam($portfolio);
+@include logjam($thumbnails);
