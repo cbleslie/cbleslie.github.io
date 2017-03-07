@@ -27,7 +27,7 @@ To create beauty in a professional environment where I will further develop my i
   - Maya
   - Blender
 
-<h3 class="trafalgar">Qualifications</h3>
+<h3 class="trafalgar">Experience</h3>
 
 {% include resume-section.html
   company="ViiMed"
