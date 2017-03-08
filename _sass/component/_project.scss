@@ -1,12 +1,91 @@
+[data-projects] {
+  height: 10rem;
+  position: relative;
+
+  [name="project-set"] {
+    display: none;
+
+    &:checked {
+      //scss-lint:Disable NestingDepth
+      + [data-project] {
+          // margin-top: 1rem;
+        top: 0;
+        transform: perspective(300px) rotateX(5deg) scaleX(1) scaleY(1) translateY(0);
+        transition: transform .5s ease-in;
+        transition-delay: .2s;
+        z-index: 4;
+        opacity: 1;
+
+        ~ [data-project] {
+          top: .4rem;
+          transform: perspective(300px) rotateX(10deg) scaleX(.95) scaleY(1) translateY(0);
+          transition: transform .4s ease-in;
+          transition-delay: .3s;
+          z-index: 3;
+          opacity: 1;
+
+          ~ [data-project] {
+            top: .9rem;
+            transform: perspective(300px) rotateX(15deg) scaleX(.9) scaleY(1) translateY(0);
+            transition: transform .6s ease-in;
+            transition-delay: .4s;
+            z-index: 2;
+            opacity: 1;
+
+            ~ [data-project] {
+              top: 1.4rem;
+              transform: perspective(300px) rotateX(20deg) scaleX(.85) scaleY(1) translateY(0);
+              transition: transform .8s ease-in;
+              transition-delay: .5s;
+              z-index: 1;
+              opacity: 1;
+
+              ~ [data-project] {
+                top: 1.9rem;
+                transform: perspective(300px) rotateX(25deg) scaleX(.8) scaleY(1) translateY(0);
+                transition: transform 1s ease-in;
+                transition-delay: .6s;
+                z-index: 0;
+                opacity: .5;
+
+                ~ [data-project] {
+                  top: 2.4rem;
+                  transform: perspective(300px) rotateX(30deg) scaleX(.75) scaleY(1) translateY(0);
+                  transition: transform 1s ease-in;
+                  transition-delay: .7s;
+                  z-index: -1;
+                  opacity: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 [data-project] {
   background-color: map-get($color, calm);
   border: 1px solid map-get($color, indifferent);
-  border-bottom: .2rem solid $key-color;
-  border-radius: .2rem;
+  border-bottom: .2rem solid darken(map-get($color, indifferent), 15%);
+  border-radius: .25rem .25rem .4rem .4rem;
+  bottom: 0;
+  box-shadow: 0 .2rem 0 0 rgba(map-get($color, despair), .1);
+  height: 6.5rem;
+  left: 0;
   padding-bottom: .8rem;
   padding-left: .8rem;
   padding-right: .8rem;
   padding-top: .5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transform: perspective(300px) rotateX(5deg) scaleX(1) scaleY(0) translateY(5rem);
+  transition: transform .8s ease-in, opacity .5s ease-in;
+  width: calc(100% - 2rem);
+  z-index: 5;
 
 
   .project--title {
@@ -18,7 +97,9 @@
     //
   }
 
-  + [data-project] {
-    margin-top: 1rem;
+  .project--button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
   }
 }
