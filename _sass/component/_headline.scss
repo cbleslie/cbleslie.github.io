@@ -1,5 +1,5 @@
-$headline-background-color-a: lighten(map-get($color, enthusiasm), 0%);
-$headline-background-color-b: darken(map-get($color, enthusiasm), 30%);
+$headline-background-color-a: lighten($key-color, 0%);
+$headline-background-color-b: darken($key-color, 30%);
 
 [data-headline] {
   background: linear-gradient(
@@ -9,6 +9,7 @@ $headline-background-color-b: darken(map-get($color, enthusiasm), 30%);
   );
   background-attachment: fixed;
   background-color: $headline-background-color-a;
+  border-bottom: .25rem solid darken($headline-background-color-a, 25%);
   box-shadow: 0 .3rem 0 0 rgba(map-get($color, despair), .2);
   color: map-get($color, calm);
   margin-top: 2rem;
