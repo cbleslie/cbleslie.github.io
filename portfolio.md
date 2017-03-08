@@ -44,12 +44,12 @@ navigation_weight: 1
       {% include project.html
         title="Viilo"
         link="https://github.com/psalaets/viilo"
-        content="The ping pong ladder for your office"
+        content="The ping pong ladder for your office, using the Elo ranking algorithm"
       %}
       {% include project.html
         title="Comichron Widget"
         link="https://github.com/comichron-data/widget"
-        content="Embedable javascript widget to track a comic's popularity"
+        content="Embeddable Javascript widget to track a comicbook's popularity using the Comichron-Data API"
       %}
       <br/>
       <h3 class="double-pica">Other</h3>
@@ -57,7 +57,7 @@ navigation_weight: 1
       {% include project.html
         title="Github"
         link="https://github.com/cbleslie/"
-        content="My profile on Github, with addtional repositories I'm working on"
+        content="My profile on Github"
       %}
       {% include project.html
         title="Codpen.io"

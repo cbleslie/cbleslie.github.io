@@ -5,10 +5,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: .2rem;
-    box-shadow: 0 0 0 1px rgba(map-get($color, indifferent), 1);
+    border-bottom: .3rem solid rgba(map-get($color, despair), .3);
+    border-radius: .2rem .2rem .4rem .4rem;
+    border-top: 1px solid rgba(map-get($color, calm), .8);
+    box-shadow: 0 .2rem 0 .1rem rgba(map-get($color, despair), .1);
     display: block;
-    filter: grayscale(1);
     height: calc(20vw);
     transition: filter .5s cubic-bezier(.68, -.55, .27, 1.55), box-shadow .4s cubic-bezier(.68, -.55, .27, 1.55);
     width: 100%;
@@ -16,14 +17,19 @@
     &:active,
     &:hover {
       box-shadow: 0 0 0 .25rem $key-color;
-      filter: grayscale(0);
     }
   }
 
   .portfolio-thumbnail--title,
   .portfolio-thumbnail--client,
   .portfolio-thumbnail--type {
+    //scss-lint:disable DuplicateProperty
     display: block;
+    hyphens: auto;
     margin-top: .25rem;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
   }
 }

@@ -1,12 +1,14 @@
 [data-project] {
   background-color: map-get($color, calm);
-  border: 1px solid map-get($color, indifferent);
-  border-bottom: .2rem solid $key-color;
-  border-radius: .2rem;
+  border: 1px solid rgba(map-get($color, despair), .1);
+  border-bottom: .22rem solid rgba(map-get($color, despair), .2);
+  border-radius: .2rem .2rem .4rem .4rem;
+  box-shadow: 0 .2rem 0 .1rem rgba(map-get($color, despair), .1);
   padding-bottom: .8rem;
   padding-left: .8rem;
   padding-right: .8rem;
   padding-top: .5rem;
+  z-index: 0;
 
   .project--title {
     display: block;
