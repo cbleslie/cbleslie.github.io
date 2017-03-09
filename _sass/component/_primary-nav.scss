@@ -71,9 +71,16 @@ $primary-nav-text-color: map-get($color, calm);
 
     a {
       color: $primary-nav-text-color;
-      height: 3rem;
       padding-left: 2rem;
       padding-right: 2rem;
+      height: 2.1rem;
+    }
+
+    li {
+      &.active {
+        a {
+        }
+      }
     }
   }
 }

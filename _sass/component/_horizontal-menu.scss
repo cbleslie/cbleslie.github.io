@@ -21,7 +21,7 @@
       rgba(
       map-get($color, calm), .2) 0%,
       rgba(
-      map-get($color, calm), .2) 100%
+      map-get($color, calm), .1) 100%
       );
     }
 
@@ -31,7 +31,7 @@
         rgba(
           map-get($color, despair), .2) 0%,
         rgba(
-          map-get($color, despair), .2) 100%
+          map-get($color, despair), .1) 100%
         );
     }
   }
