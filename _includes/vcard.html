@@ -1,9 +1,6 @@
 <aside data-vcard>
-  <h3 class="double-pica">Contact Information</h3>
-  <div class="name">
-    {{ include.user_name }}
-  </div>
-  <div class="phone">
+  <h3 class="double-pica">{{ include.user_name }}</h3>
+  <div class="vcard--phone">
     <a href="mailto:{{ include.user_email }}">{{ include.user_email }}</a>
   </div>
 </aside>
