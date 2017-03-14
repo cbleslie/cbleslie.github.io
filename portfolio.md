@@ -39,7 +39,7 @@ navigation_weight: 1
       {% include project.html
         title="LogJam"
         link="https://github.com/cbleslie/LogJam"
-        content="An API'esq way of managing your flexbox layouts"
+        content="An API for managing your flexbox layouts"
       %}
       {% include project.html
         title="Viilo"
