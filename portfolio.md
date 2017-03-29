@@ -42,6 +42,11 @@ navigation_weight: 1
         content="An API for managing your flexbox layouts"
       %}
       {% include project.html
+        title="Static API Starter Kit"
+        link="https://github.com/cbleslie/Static-API-Starter-Kit"
+        content="Use Gulp and Markdown files to generate a static API."
+      %}
+      {% include project.html
         title="Viilo"
         link="https://github.com/psalaets/viilo"
         content="The ping pong ladder for your office, using the Elo ranking algorithm"
